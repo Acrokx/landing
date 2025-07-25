@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yu-Gi-Oh! Dioses Egipcios</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: #0a0a0a; /* Fondo oscuro */
+    }
+    /* Animación flotante */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+    /* Efecto brillante para el título */
+    .glow {
+      text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+  </style>
+</head>
+<body class="text-gray-200 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-[#C41E3A] text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+      <div class="flex items-center space-x-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/1722/1722688.png" class="h-8 w-8" alt="logo">
+        <span class="font-bold text-lg">Duelos Egipcios</span>
+      </div>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#hero" class="hover:text-yellow-400">Inicio</a></li>
+        <li><a href="#features" class="hover:text-yellow-400">Características</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero con los 3 dioses -->
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-[#1A1A1D] to-[#0a0a0a]">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 glow">¡Invoca El Poder De los Dioses Egipcios!</h1>
+    <p class="text-lg mb-10 text-gray-300 max-w-xl">Conviertete En El Mejor Duelista Del Mundo.</p>
+    
+    <!-- Cartas -->
+    <div class="flex justify-center gap-4 md:gap-8">
+      <img src="slifer.jpeg" alt="Slifer" 
+           class="w-28 md:w-40 lg:w-48 rounded-lg shadow-lg float hover:scale-110 hover:shadow-yellow-400 transition">
+      <img src="obelisco.jpeg" alt="Obelisco" 
+           class="w-28 md:w-40 lg:w-48 rounded-lg shadow-lg float hover:scale-110 hover:shadow-yellow-400 transition delay-150">
+      <img src="ra.jpeg" alt="Ra" 
+           class="w-28 md:w-40 lg:w-48 rounded-lg shadow-lg float hover:scale-110 hover:shadow-yellow-400 transition delay-300">
+    </div>
+
+    <!-- Botón -->
+    <div class="mt-10">
+      <a href="#features" class="bg-yellow-500 text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition">Explorar Más</a>
+    </div>
+  </section>
+
+  <!-- Sección de características -->
+  <section id="features" class="py-20 bg-[#1A1A1D]">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-12">Características Épicas</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card -->
+        <div class="bg-[#2A2A2E] p-6 rounded-xl shadow-lg hover:scale-105 transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/706/706830.png" class="h-16 mx-auto mb-4" alt="">
+          <h3 class="text-xl font-semibold mb-2">Duelos Legendarios</h3>
+          <p class="text-gray-400">Enfréntate a duelistas de todo el mundo en combates en línea.</p>
+        </div>
+        <div class="bg-[#2A2A2E] p-6 rounded-xl shadow-lg hover:scale-105 transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/3570/3570133.png" class="h-16 mx-auto mb-4" alt="">
+          <h3 class="text-xl font-semibold mb-2">Colecciona Cartas</h3>
+          <p class="text-gray-400">Obtén cartas raras y arma el mazo de tus sueños.</p>
+        </div>
+        <div class="bg-[#2A2A2E] p-6 rounded-xl shadow-lg hover:scale-105 transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="h-16 mx-auto mb-4" alt="">
+          <h3 class="text-xl font-semibold mb-2">Estrategias Únicas</h3>
+          <p class="text-gray-400">Combina efectos y tácticas para derrotar a cualquier oponente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section id="contact" class="py-20 bg-[#0a0a0a]">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Contáctanos</h2>
+      <form action="mailto:tuemail@correo.com" method="POST" enctype="text/plain"
+            class="bg-[#1A1A1D] p-6 rounded-xl shadow-md space-y-4">
+        <div>
+          <label class="block font-medium mb-1">Nombre</label>
+          <input type="text" placeholder="Tu nombre" class="w-full p-3 border rounded-lg bg-[#2A2A2E] text-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Correo</label>
+          <input type="email" placeholder="tucorreo@mail.com" class="w-full p-3 border rounded-lg bg-[#2A2A2E] text-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Mensaje</label>
+          <textarea rows="4" placeholder="Escribe tu mensaje..." class="w-full p-3 border rounded-lg bg-[#2A2A2E] text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+        </div>
+        <button type="submit" class="bg-[#C41E3A] text-white px-6 py-3 rounded-lg hover:bg-red-700 transition w-full">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1A1A1D] text-white py-6 text-center">
+    <p>© 2025 Yu-Gi-Oh! Fan Page. No oficial.</p>
+    <div class="flex justify-center space-x-6 mt-2">
+      <a href="#" class="hover:text-yellow-400">Privacidad</a>
+      <a href="#" class="hover:text-yellow-400">Términos</a>
+      <a href="#" class="hover:text-yellow-400">Ayuda</a>
+    </div>
+  </footer>
+
+</body>
+</html>
